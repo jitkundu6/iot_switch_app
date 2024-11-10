@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThingSpeak IoT Control</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <h1>ThingSpeak IoT Control</h1>
+
+    <!-- Message Section -->
+    <div>
+        <h2>Send a Message</h2>
+        <input type="text" id="message" placeholder="Type your message">
+        <button onclick="sendMessage()">Send Message</button>
+        <p id="send_status"></p>
+    </div>
+
+    <!-- Read Message Section -->
+    <div>
+        <h2>Latest Message</h2>
+        <button onclick="readMessage()">Read Message</button>
+        <p id="latest_message"></p>
+    </div>
+
+    <!-- Switch Control Section -->
+    <div>
+        <h2>Switch Control</h2>
+        <button onclick="controlSwitch('on')">Turn On</button>
+        <button onclick="controlSwitch('off')">Turn Off</button>
+        <p id="switch_status"></p>
+    </div>
+</body>
+</html>
